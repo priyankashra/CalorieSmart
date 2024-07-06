@@ -1,0 +1,102 @@
+.con{
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+}
+.infoCon{
+    background-color: white;
+    box-shadow: 0 2px 5px #777;
+    border-radius: 5px;
+}
+.selectArea{
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.totalClick{
+    color: #2e63bd;
+    font-size: 16px;
+}
+.info{
+    text-align: center;
+    font-size: 13px;
+    color: #212529;
+    font-weight: 700;
+    padding: 3px;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+
+/* ---------- specific div section  */
+.foodItems{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+}
+.foodItems .items{
+    position: relative;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #2e63bd;
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.foodItems .items:hover{
+    transform: scale(1.05);
+}
+.foodItems .items:active{
+    transform: scale(0.95);
+}
+.foodItems .items input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+.foodItems .items input + i{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-color: #2e63bd;
+    padding: 3px;
+    border-radius: 50%;
+    opacity: 0;
+}
+.foodItems .items input:checked + i{
+    opacity: 1;
+}
+@media only screen and (max-width: 1000px) {
+    .foodItems .items{
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+    }
+    h3{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    h3{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .foodItems .items{
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 15px;
+    }
+}
